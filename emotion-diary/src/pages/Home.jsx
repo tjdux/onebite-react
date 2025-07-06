@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { DiaryStateContext } from "../App";
-
+import usePageTitle from "../hooks/usePageTitle";
 import Header from "../components/Header";
 import Button from "../components/Button";
 import DiaryList from "../components/Home/DiaryList";
@@ -31,6 +31,7 @@ const getMonthlyData = (pivotDate, data) => {
 function Home() {
   const data = useContext(DiaryStateContext);
   const [pivotDate, setPivotDate] = useState(new Date());
+  usePageTitle("감정 일기장");
 
   const monthlyData = getMonthlyData(pivotDate, data);
 
