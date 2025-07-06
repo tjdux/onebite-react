@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { DiaryDispatchContext } from "../App";
 import Header from "../components/Header";
 import Button from "../components/Button";
-import Editor from "../components/New/Editor";
+import Editor from "../components/Editor/Editor";
 
 function New() {
   const { onCreate } = useContext(DiaryDispatchContext);
